@@ -1,56 +1,67 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-/* Add a background color and some padding to the header */
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  animation: bg-animation 40s infinite;
+  transition: background 5s ease-in-out;
 }
 
-/* Style the nav links */
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
+@keyframes bg-animation {
+  0%, 100% {
+    background: url('webpagebg.png') no-repeat center center fixed;
+    background-size: cover;
+    
+  }
+  50% {
+    background: url('webpagebg2.png') no-repeat center center fixed;
+    background-size: cover;
+   
+  }
 }
 
-/* Add some spacing and center content in sections */
-section {
-    padding: 20px;
-    text-align: center;
+header, .single, footer {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Different background colors for each section to distinguish them */
-#hero {
-    background-color: #f4f4f4;
+.single img {
+  max-width: 50%;  /* Slightly smaller */
 }
 
-#about {
-    background-color: #fff;
+.info a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  text-decoration: none;
 }
 
-#music {
-    background-color: #f4f4f4;
+.info a:hover {
+  background-color: #0056b3;
 }
 
-#tour {
-    background-color: #fff;
-}
-
-#contact {
-    background-color: #f4f4f4;
-}
-
-/* Footer styling */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 600px) {
+  header, .single, footer {
+    margin: 10px;
+    padding: 10px;
+  }
+  .single img {
+    max-width: 90%;  /* Larger on mobile */
+  }
 }
 
