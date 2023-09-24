@@ -1,0 +1,56 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a background color and some padding to the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Style the nav links */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Add some spacing and center content in sections */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Different background colors for each section to distinguish them */
+#hero {
+    background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #fff;
+}
+
+#music {
+    background-color: #f4f4f4;
+}
+
+#tour {
+    background-color: #fff;
+}
+
+#contact {
+    background-color: #f4f4f4;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
