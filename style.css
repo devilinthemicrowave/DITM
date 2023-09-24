@@ -1,12 +1,12 @@
-/* General Styles */
+/* Reset and Global Styles */
 body, html {
-  height: 100%;
   margin: 0;
+  height: 100%;
   font-family: 'Oswald', sans-serif; /* Fallback font */
   color: #ffffff;  /* White text */
 }
 
-/* Background Animation */
+/* Background Styles */
 .bg {
   position: fixed;
   top: 0;
@@ -14,22 +14,11 @@ body, html {
   height: 100%;
   width: 100%;
   z-index: -1;
-  animation: bg-animation 40s infinite;
-  transition: background 5s ease-in-out;
+  background: url('bg4.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-@keyframes bg-animation {
-  0%, 100% {
-    background: url('bg4.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  50% {
-    background: url('bg4.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-}
-
-/* Header, Single Sections, and Footer */
+/* Container Styles */
 header, .single, footer {
   margin: 20px;
   padding: 20px;
@@ -37,7 +26,7 @@ header, .single, footer {
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-/* Text and Button Styles */
+/* Text Styles */
 header h1, .info h2 {
   font-size: 3.5rem;
   line-height: 1.2;
@@ -60,22 +49,9 @@ header h1, .info h2 {
   background-color: #0056b3;
 }
 
-/* Footer specific */
 footer {
   letter-spacing: 2px;
-}
-
-/* Single Artworks */
-.single img {
-  max-width: 50%;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1), -5px -5px 15px rgba(255, 255, 255, 0.1);
-}
-
-/* Streaming Logos */
-.streaming-logo {
-  width: 24px;
-  height: auto;
-  margin-right: 10px;
+  
 }
 
 /* Media Queries for Mobile */
@@ -88,3 +64,28 @@ footer {
     max-width: 90%;
   }
 }
+
+/* Artwork and Logos */
+.single img {
+  max-width: 50%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.streaming-logo {
+  width: 36px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Remove Focus Outline */
+a.no-outline:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+footer a {
+  background-color: transparent;  /* Reset background */
+  padding: 0;                     /* Reset padding */
+  margin: 0;                      /* Reset margin */
+}
+
