@@ -16,12 +16,12 @@ body, html {
 
 @keyframes bg-animation {
   0%, 100% {
-    background: url('bg1.jpg') no-repeat center center fixed;
+    background: url('bg3.jpg') no-repeat center center fixed;
     background-size: cover;
     
   }
   50% {
-    background: url('bg2.jpg') no-repeat center center fixed;
+    background: url('bg3.jpg') no-repeat center center fixed;
     background-size: cover;
    
   }
@@ -31,7 +31,7 @@ header, .single, footer {
   margin: 20px;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .single img {
@@ -45,6 +45,7 @@ header, .single, footer {
   background-color: #2196F3;
   color: white;
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .info a:hover {
@@ -52,7 +53,7 @@ header, .single, footer {
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 600px) {
@@ -66,29 +67,29 @@ footer {
 }
 /* Basic typography settings */
 body {
-  font-family: 'Open Sans', sans-serif;  /* Fallback font */
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;  /* Fallback font */
   color: #ffffff;  /* white text */
 }
 
 header h1, .info h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   line-height: 1.2;
   font-weight: bold;
 }
 
 .info a, footer a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* Adding some text shadow for readability */
 header h1, .info h2, .info a, footer a, footer p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.);
 }
 
 /* Footer specific */
 footer {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
-
 
 
