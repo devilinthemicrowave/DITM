@@ -2,18 +2,39 @@
 body, html {
   margin: 0;
   height: 100%;
-  font-family: 'Oswald', sans-serif; /* Fallback font */
-  color: #ffffff;  /* White text */
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
 }
 
-/* Background Styles */
+/* Background Overlay */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background: rgba(0, 0, 0, 0);
+  animation: dimAnimation 10s infinite alternate;
+}
+
+@keyframes dimAnimation {
+  0%, 100% {
+    background: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Background Image */
 .bg {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: -3;
   background: url('bg4.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -23,14 +44,12 @@ header, .single, footer {
   margin: 20px;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* Text Styles */
 header h1, .info h2 {
   font-size: 3.5rem;
-  line-height: 1.2;
-  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -38,23 +57,21 @@ header h1, .info h2 {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #2196F3;
+  background-color: #a86d20;
   color: white;
   text-decoration: none;
-  letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .info a:hover {
-  background-color: #0056b3;
+  background-color: #8B6914;
 }
 
+/* Footer and Media Queries */
 footer {
   letter-spacing: 2px;
-  
 }
 
-/* Media Queries for Mobile */
 @media (max-width: 600px) {
   header, .single, footer {
     margin: 10px;
@@ -77,15 +94,9 @@ footer {
   margin-right: 10px;
 }
 
-/* Remove Focus Outline */
-a.no-outline:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
+/* Remove Footer Styles */
 footer a {
-  background-color: transparent;  /* Reset background */
-  padding: 0;                     /* Reset padding */
-  margin: 0;                      /* Reset margin */
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
-
