@@ -39,6 +39,11 @@ body, html {
   background-size: cover;
 }
 
+.hidden {
+  display: none;
+}
+
+
 /* Container Styles */
 header, .single, footer {
   margin: 20px;
