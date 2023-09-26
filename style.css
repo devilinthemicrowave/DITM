@@ -110,17 +110,24 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* This takes up 80% of the viewport height */
+    min-height: 80vh; /* Updated from height to min-height */
+    flex-direction: column; /* Stack items vertically */
     font-size: 3rem;
     color: gold;
 }
+
+.vip-section h2 {
+    color: #ad8032; /* Gold color, same as the button */
+}
+
+
 
 .gold-button {
     display: block;
     width: 200px;
     height: 60px;
     margin: 20px auto; /* This centers the button horizontally */
-    background-color: #D4AF37; /* Gold color */
+    background-color: #ad8032; /* Gold color */
     color: white;
     text-align: center;
     border-radius: 8px;
